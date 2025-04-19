@@ -41,106 +41,87 @@
         </body>
 
 
-        <body name="block0" pos="-0.8 -0.5 0.025" quat="0. 0. 1. 0.">
+        <body name="block0" pos="-0.6 -0.50 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block0_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block1" pos="-0.8 -0.6 0.025" quat="0. 0. 1. 0.">
+        <body name="block1" pos="-0.6 -0.60 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block1_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block2" pos="-0.8 -0.7 0.025" quat="0. 0. 1. 0.">
+        <body name="block2" pos="-0.6 -0.70 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block2_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block3" pos="-0.8 -0.8 0.025" quat="0. 0. 1. 0.">
+        <body name="block3" pos="-0.6 -0.80 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block3_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block4" pos="-0.8 -0.9 0.025" quat="0. 0. 1. 0.">
+        <body name="block4" pos="-0.6 -0.90 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block4_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block5" pos="-0.7 -0.5 0.025" quat="0. 0. 1. 0.">
+        <body name="block5" pos="-0.5 -0.50 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block5_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block6" pos="-0.7 -0.6 0.025" quat="0. 0. 1. 0.">
+        <body name="block6" pos="-0.5 -0.60 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block6_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block7" pos="-0.7 -0.7 0.025" quat="0. 0. 1. 0.">
+        <body name="block7" pos="-0.5 -0.70 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block7_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block8" pos="-0.7 -0.8 0.025" quat="0. 0. 1. 0.">
+        <body name="block8" pos="-0.5 -0.80 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block8_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block9" pos="-0.7 -0.9 0.025" quat="0. 0. 1. 0.">
+        <body name="block9" pos="-0.5 -0.90 0.05" quat="0. 0. 1. 0.">
             <freejoint name="block9_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
 
-        <body name="block10" pos="-0.6 -0.5 0.025" quat="0. 0. 1. 0.">
+        <body name="block10" pos="-0.6 -0.50 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block10_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block11" pos="-0.6 -0.6 0.025" quat="0. 0. 1. 0.">
+        <body name="block11" pos="-0.6 -0.60 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block11_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block12" pos="-0.6 -0.7 0.025" quat="0. 0. 1. 0.">
+        <body name="block12" pos="-0.6 -0.70 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block12_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block13" pos="-0.6 -0.8 0.025" quat="0. 0. 1. 0.">
+        <body name="block13" pos="-0.6 -0.80 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block13_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block14" pos="-0.6 -0.9 0.025" quat="0. 0. 1. 0.">
+        <body name="block14" pos="-0.6 -0.90 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block14_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block15" pos="-0.5 -0.5 0.025" quat="0. 0. 1. 0.">
+        <body name="block15" pos="-0.5 -0.50 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block15_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block16" pos="-0.5 -0.6 0.025" quat="0. 0. 1. 0.">
+        <body name="block16" pos="-0.5 -0.60 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block16_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block17" pos="-0.5 -0.7 0.025" quat="0. 0. 1. 0.">
+        <body name="block17" pos="-0.5 -0.70 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block17_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block18" pos="-0.5 -0.8 0.025" quat="0. 0. 1. 0.">
+        <body name="block18" pos="-0.5 -0.80 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block18_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
-        <body name="block19" pos="-0.5 -0.9 0.025" quat="0. 0. 1. 0.">
+        <body name="block19" pos="-0.5 -0.90 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block19_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
         </body>
-
         <body name="block20" pos="-1.04 -0.88 0.025" quat="0. 0. 1. 0.">
             <freejoint name="block20_fj"/>
             <geom type="box" size=".04 .04 .02" material="wood_material"/>
