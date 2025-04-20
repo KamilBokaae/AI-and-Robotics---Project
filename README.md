@@ -81,3 +81,9 @@ sim_ur5/mujoco_env/assets/scenes/clairlab/scene.xml
 For a detailed explanation of the project's objectives, methods, and results, please refer to the report file:
 
 **File:** `report.pdf`
+---
+
+## 👥 Contributors
+
+- **Kamil Bokaae**
+- **Rula Younis**
