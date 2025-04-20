@@ -1,15 +1,21 @@
+# Imports
 import numpy as np
 import time
 import random
 import matplotlib.pyplot as plt
 from scipy.optimize import linear_sum_assignment
 
+# Local imports for the UR5 simulation environment
 from sim_ur5.mujoco_env.sim_env import SimEnv
 from sim_ur5.motion_planning.motion_executor import MotionExecutor
 from sim_ur5.mujoco_env.common.ur5e_fk import forward
 
+# Global list to store results of different heuristics
 results = []
 
+# ---------- Utility Functions ----------
+
+# Computes the cost matrix (Euclidean distance) between all start-target pairs
 def compute_cost_matrix(starts, targets):
     try:
         cost_matrix = np.zeros((len(starts), len(targets)))
@@ -21,6 +27,7 @@ def compute_cost_matrix(starts, targets):
         print(f"[Error] Failed to compute cost matrix: {e}")
         return np.array([])
 
+# Saves results for one heuristic run
 def save_run_result(name, assignments, total_cost, exec_time):
     try:
         result = {
@@ -33,6 +40,7 @@ def save_run_result(name, assignments, total_cost, exec_time):
     except Exception as e:
         print(f"[Error] Failed to save result for {name}: {e}")
 
+# Prints a table summary of all heuristic performances
 def print_results_summary(results):
     try:
         print("\n--- Heuristic Comparison Summary ---")
@@ -42,6 +50,10 @@ def print_results_summary(results):
     except Exception as e:
         print(f"[Error] Failed to print summary: {e}")
 
+
+# ---------- Visualization Functions ----------
+
+# Bar plot of execution times per heuristic
 def plot_execution_times(results):
     try:
         names = [r["name"] for r in results]
@@ -56,6 +68,7 @@ def plot_execution_times(results):
     except Exception as e:
         print(f"[Error] Failed to plot execution times: {e}")
 
+# Bar plot of total distances per heuristic
 def plot_total_distances(results):
     try:
         names = [r["name"] for r in results]
@@ -70,6 +83,7 @@ def plot_total_distances(results):
     except Exception as e:
         print(f"[Error] Failed to plot distances: {e}")
 
+# Arrow plot visualizing assignments between start and target positions
 def plot_assignment_arrows(assignments, title):
     try:
         plt.figure(figsize=(8, 8))
@@ -98,6 +112,7 @@ def plot_assignment_arrows(assignments, title):
     except Exception as e:
         print(f"[Error] Failed to plot arrows: {e}")
 
+# Scatter plot showing trade-off between distance and execution time
 def plot_distance_vs_time(results):
     try:
         plt.figure(figsize=(6, 6))
@@ -113,6 +128,10 @@ def plot_distance_vs_time(results):
     except Exception as e:
         print(f"[Error] Failed to plot distance vs time: {e}")
 
+
+# ---------- Matching Heuristics ----------
+
+# Hardcoded start and target positions
 def get_positions():
     start_positions = [
         [-0.6, -0.50, 0.05], [-0.6, -0.60, 0.05], [-0.6, -0.70, 0.05], [-0.6, -0.80, 0.05], [-0.6, -0.90, 0.05],
@@ -131,7 +150,7 @@ def get_positions():
     ]
     return start_positions, target_positions
 
-# Matching functions: no changes needed except for fallback on failure
+# Custom greedy-like nearest neighbor matching
 def euclidean_sorted_matching(starts, targets):
     try:
         cost_matrix = compute_cost_matrix(starts, targets)
@@ -156,6 +175,7 @@ def euclidean_sorted_matching(starts, targets):
         print(f"[Error] Euclidean matching failed: {e}")
         return [], 0
 
+# Hungarian algorithm for optimal matching
 def hungarian_matching(starts, targets):
     try:
         cost_matrix = compute_cost_matrix(starts, targets)
@@ -167,6 +187,7 @@ def hungarian_matching(starts, targets):
         print(f"[Error] Hungarian matching failed: {e}")
         return [], 0
 
+# Basic greedy strategy matching
 def greedy_matching(starts, targets):
     try:
         used = [False] * len(targets)
@@ -190,6 +211,7 @@ def greedy_matching(starts, targets):
         print(f"[Error] Greedy matching failed: {e}")
         return [], 0
 
+# Random shuffling-based matching
 def random_matching(starts, targets):
     try:
         targets_copy = targets.copy()
@@ -201,6 +223,10 @@ def random_matching(starts, targets):
         print(f"[Error] Random matching failed: {e}")
         return [], 0
 
+
+# ---------- Simulation Execution ----------
+
+# Executes pick and place task for a given matching heuristic
 def run_heuristic(name, match_fn):
     try:
         starts, targets = get_positions()
@@ -227,12 +253,14 @@ def run_heuristic(name, match_fn):
     except Exception as e:
         print(f"[Error] Failed during heuristic '{name}': {e}")
 
-# Run all
+
+# ---------- Run All Heuristics ----------
 run_heuristic("Euclidean", euclidean_sorted_matching)
 run_heuristic("Hungarian", hungarian_matching)
 run_heuristic("Greedy", greedy_matching)
 run_heuristic("Random", random_matching)
 
+# Final summary and visualizations
 print_results_summary(results)
 plot_execution_times(results)
 plot_total_distances(results)
