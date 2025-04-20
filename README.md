@@ -36,7 +36,7 @@ To run a specific task:
 
 ## Part B – Real-World Robotic Tasks
 
-**Script:** `partB/stack.py`
+**Script:** `partB/partB.py`
 
 ### Description  
 This part includes two robotic behaviors implemented using UR5 arms:
