@@ -10,7 +10,7 @@ For each part:
 
 ---
 
-## 📁 Part A – Simulated Stacking and Transfer
+## Part A – Simulated Stacking and Transfer
 
 **Script:** `partA/partA.py`
 
@@ -34,7 +34,7 @@ To run a specific task:
 
 ---
 
-## 📁 Part B – Real-World Robotic Tasks
+## Part B – Real-World Robotic Tasks
 
 **Script:** `partB/stack.py`
 
@@ -50,7 +50,7 @@ Located in `videos/partB/`:
 
 ---
 
-## 📁 Part C – Heuristic-Based Block Assignment (Simulation)
+## Part C – Heuristic-Based Block Assignment (Simulation)
 
 **Script:** `partC/partC.py`
 
@@ -66,7 +66,7 @@ Located in `videos/partC/`:
 
 ---
 
-## ⚠️ Important Note
+## Important Note
 
 To run **Part C** correctly, you **must replace** the existing `scene.xml` file at the following path:
 
@@ -76,14 +76,14 @@ sim_ur5/mujoco_env/assets/scenes/clairlab/scene.xml
 
 ---
 
-## 📄 Project Report
+## Project Report
 
 For a detailed explanation of the project's objectives, methods, and results, please refer to the report file:
 
 **File:** `report.pdf`
 ---
 
-## 👥 Contributors
+## Contributors
 
 - **Kamil Bokaae**
 - **Rula Younis**
