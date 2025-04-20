@@ -1,37 +1,75 @@
-# Project Homework
+# Project Overview
 
-This project is divided into three parts: Part A, Part B, and Part C. Each part contains Python scripts (and videos) that demonstrate different functionalities related to robotic manipulation and simulation.
+This project is divided into three parts: **Part A**, **Part B**, and **Part C**.  
+Each part includes Python scripts and corresponding videos demonstrating robotic tasks—either in simulation or real-world settings.
 
-## Part A
-- File: `partA/partA.py`
+For each part:
 
-- Description: This script performs basic tasks as part of the initial assignment.
+- Scripts are located in: `partA/`, `partB/`, or `partC/`.
+- Related videos are stored under: `videos/partX/`, where `X` is A, B, or C.
 
--Videos:
-  Simulation videos are included in this folder to demonstrate the behavior implemented in `partA.py`.
+---
 
-## Part B
-- File: `partB/stack.py`
+## 📁 Part A – Simulated Stacking and Transfer
 
-- Description:  
-  This part includes two implemented real-world robotic behaviors using UR5 arms:
-  1. Stacking Task:  
-     A robot stacks blocks at a target position.
-  2. Touch Interaction Task:  
-     One robot picks and holds a block at a designated point, while the second robot approaches and gently touches the block with its end-effector without grasping or taking it.
+**Script:** `partA/partA.py`
 
-- Videos (Real Lab Recordings):
-  - `stackLab.mp4` – UR5 robot performing the stacking operation.
-  - `transferLab.mp4` – UR5 robots performing the cooperative touch interaction task.
+### Description
+This script runs two simulated robotic tasks:
+1. **Stacking** – The robot picks and stacks blocks at a specified target location.
+2. **Transfer with Touch** – One robot transfers a block while another approaches and lightly touches it.
 
+### Videos (Simulation Recordings)  
+Located in `videos/partA/`:
+- `stackPartA.mp4` – Demonstrates the stacking task.
+- `transferPartA.mp4` – Demonstrates the transfer task.
 
-## Part C
-- File: `partC/partC.py`
-- Description:
-  This script runs in a simulated environment, where one robot places a set of blocks to form the word "AI" as a symbolic layout task.
+### Note
+To run a specific task:
+- Comment out the unwanted function in `partA.py`.
 
-- Video:  
-  A simulation video is provided demonstrating this block-arranging behavior.
+**Functions:**
+- `stack()`
+- `transferCubeBetweenRobots()`
 
-- **Important Note**: 
-To run Part C correctly, you must replace the existing `scene.xml` file located at: sim_ur5/mujoco_env/assets/scenes/clairlab/scene.xml
+---
+
+## 📁 Part B – Real-World Robotic Tasks
+
+**Script:** `partB/stack.py`
+
+### Description  
+This part includes two robotic behaviors implemented using UR5 arms:
+1. **Stacking Task** – A robot stacks blocks at a target location.
+2. **Transfer Task** – One robot holds a block; the second robot approaches and gently touches it with its end-effector.
+
+### Videos (Real Lab Recordings)  
+Located in `videos/partB/`:
+- `stackLab.mp4` – UR5 robot performing the stacking operation.
+- `transferLab.mp4` – Cooperative touch interaction task.
+
+---
+
+## 📁 Part C – Heuristic-Based Block Assignment (Simulation)
+
+**Script:** `partC/partC.py`
+
+### Description  
+This simulation involves a robot arranging blocks to form the word **"AI"**, using different heuristic strategies for assignment.
+
+### Videos (Simulation Recordings)  
+Located in `videos/partC/`:
+- `greedy.mp4` – Greedy Nearest heuristic.
+- `hungarian.mp4` – Hungarian algorithm for optimal matching.
+- `euclidean.mp4` – Assignment based on Euclidean distance.
+- `random.mp4` – Random assignment strategy.
+
+---
+
+## ⚠️ Important Note
+
+To run **Part C** correctly, you **must replace** the existing `scene.xml` file at the following path:
+
+```
+sim_ur5/mujoco_env/assets/scenes/clairlab/scene.xml
+```
