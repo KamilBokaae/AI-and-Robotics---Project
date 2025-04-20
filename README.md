@@ -72,7 +72,9 @@ To run **Part C** correctly, you **must replace** the existing `scene.xml` file 
 
 ```
 sim_ur5/mujoco_env/assets/scenes/clairlab/scene.xml
-```---
+```
+
+---
 
 ## 📄 Project Report
 
